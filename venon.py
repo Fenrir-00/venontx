@@ -76,7 +76,7 @@ def menu():
     print()
     print(f"{color.morado}TE GUSTARIA CREAR UN PAYLOAD")
     print("")
-    print(f"{color.verde}[1]CEAR PAYLOAD")
+    print(f"{color.verde}[1] CREAR PAYLOAD")
     print(f"{color.rojo}[0]SALIR{color.fin}")
     print()
     eleccion =input(f"{color.cyan}ELIJE UN NUMERO >>{color.fin} ")
