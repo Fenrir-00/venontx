@@ -207,8 +207,9 @@ def msf():
    time.sleep(6)
    subprocess.run(['bash','./metasploit.sh'])
    banner()
-   pronto(f"""{color.verde}METASPLOIT INSTALADO [✓]
-EJECUTA EL SCRIPT OTRA VEZ{color.fin}""")
+   print(f"""{color.verde}METASPLOIT INSTALADO [✓]
+EJECUTA EL SCRIPT OTRA VEZ
+{color.amarillo}PUEDE DESINSTALAR LOS BANER VUELVE A PONERLO{color.fin}""")
    sys.exit()
 
 menu()
