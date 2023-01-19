@@ -205,6 +205,9 @@ def msf():
         PROCEDIENDO A INSTALARLO TARDARA
            UN RATO NO TENGAS PRISA{color.fin}""")
    time.sleep(6)
+   os.system("pkg install wget")
+   os.system("wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh")
+   os.system("chmod +x metasploit.sh")
    subprocess.run(['bash','./metasploit.sh'])
    banner()
    print(f"""{color.verde}METASPLOIT INSTALADO [✓]
